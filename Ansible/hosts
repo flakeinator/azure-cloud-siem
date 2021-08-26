@@ -28,11 +28,6 @@
 10.0.0.5 ansible_python_interpreter=/usr/bin/python3\
 10.0.0.6 ansible_python_interpreter=/usr/bin/python3\
 \
-#This is for the Elk server to ensure that software gets install per the scripts.\
-[elk]\
-10.1.0.4 ansible_python_interpreter=/usr/bin/python3\
-\
-\
 #alpha.example.org\
 #beta.example.org\
 #192.168.1.100\
@@ -55,4 +50,8 @@
 # Here's another example of host ranges, this time there are no\
 # leading 0s:\
 \
-#db-[99:101]-node.example.com}
+#db-[99:101]-node.example.com\
+\
+#This is for the Elk server to ensure that software gets install per the scripts.\
+[elk]\
+10.1.0.4 ansible_python_interpreter=/usr/bin/python3}
