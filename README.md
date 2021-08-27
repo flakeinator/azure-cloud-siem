@@ -39,8 +39,8 @@ The configuration details of each machine may be found below.
 | Name         | Function     | IP Address | Operating System |
 |--------------|--------------|------------|------------------|
 | Jump Box     | Gateway      | 10.0.0.4   | Linux            |
-| Web-1 | Webserver    | 10.0.0.5   | Linux            |
-| Web-2 | Webserver    | 10.0.0.6   | Linux            |
+| Web-1        | Webserver    | 10.0.0.5   | Linux            |
+| Web-2        | Webserver    | 10.0.0.6   | Linux            |
 | Elk Server   | Elasticstack | 10.1.0.4   | Linux            |
 
 ### Access Policies
@@ -71,14 +71,14 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it eliminates human error and ensures that everything is the same each time. It also allows the filers to be shared with anybody and they can do the installs with the same results.
 
 The playbook implements the following tasks:
-•    After setting the host file with the proper group (elk) the script will install the following for the Elk server.
-•    Docker.io will be installed first. If it is already present on the machine it will be skipped.
-•    The next thing that will be installed is python3. If it is already present on the machine it will be skipped.
-•    The docker module will be installed and if already present will be skipped.
-•    The next thing that is done is to increase the virtual memory. Without this step, the Elk server will crash.
-•    The next item is a shell module to ensure that upon restart the memory is set properly to prevent crashing.
-•    The next last step is to download and install the docker elk container.
-•    The final step is to enable the docker service on reboot.
+- After setting the host file with the proper group (elk) the script will install the following for the Elk server.
+- Docker.io will be installed first. If it is already present on the machine it will be skipped.
+- The next thing that will be installed is python3. If it is already present on the machine it will be skipped.
+- The docker module will be installed and if already present will be skipped.
+- The next thing that is done is to increase the virtual memory. Without this step, the Elk server will crash.
+- The next item is a shell module to ensure that upon restart the memory is set properly to prevent crashing.
+- The next last step is to download and install the docker elk container.
+- The final step is to enable the docker service on reboot.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -90,12 +90,12 @@ Web-1 – 10.0.0.5
 Web-2 – 10.0.0.6
 
 We have installed the following Beats on these machines:
-•    Filebeat
-•    Metricbeat
+- Filebeat
+- Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-•    Filebeat – This is collecting log files for any of the specified modules and then sending that information over to the Kibana server for analysis.
-•    Metricbeat – This is collecting information about the web servers. This information includes but is not limited to CPU and memory usage, process, and file system levels.
+- Filebeat – This is collecting log files for any of the specified modules and then sending that information over to the Kibana server for analysis.
+- Metricbeat – This is collecting information about the web servers. This information includes but is not limited to CPU and memory usage, process, and file system levels.
 
 
 ### Using the Playbook
