@@ -108,6 +108,6 @@ SSH into the control node and follow the steps below:
 
 Some of the commands that will be needed:
 
-- To run the ansible file – ansible-playbook <name of playbook>
+- To run the ansible file – ansible-playbook (name of playbook)
 - To update any of the files – nano <filename>
 - To download the files – The wget command can be used to download the files.
